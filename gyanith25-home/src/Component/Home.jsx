@@ -9,6 +9,7 @@ import search from "./Asset/search.png";
 import power from "./Asset/power.png";
 import user from "./Asset/user.png";
 
+
 const HandleClick = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
@@ -20,11 +21,19 @@ const Home = () => {
           <img src={search} alt="" />
           <input type="text" placeholder="Search" />
         </div>
-        <div className="content"></div>
+        <div className="content">
+          <div className="title-event">
+            <div className="title-text">Events</div>
+            <input type="text" />
+          </div>
+          <div className="app"></div>
+          <div className="sponsor-title"></div>
+          <div className="sponsor"></div>
+        </div>
         <div className="bottom">
           <div className="user">
             <img src={user} alt="" />
-            UserName
+            {data.username}
           </div>
           <img src={power} alt="" className="power" />
         </div>

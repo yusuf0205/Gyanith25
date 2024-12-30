@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Event Name 1",
+      "image": "/path-to-image1.jpg"
+    },
+    {
+      "name": "Event Name 2",
+      "image": "/path-to-image2.jpg"
+    },
+    {
+      "name": "Event Name 3",
+      "image": "/path-to-image3.jpg"
+    },
+    {
+      "name": "Event Name 4",
+      "image": "/path-to-image4.jpg"
+    },
+    {
+      "name": "Event Name 5",
+      "image": "/path-to-image5.jpg"
+    },
+    {
+      "name": "Event Name 6",
+      "image": "/path-to-image6.jpg"
+    },
+    {
+      "name": "Event Name 7",
+      "image": "/path-to-image7.jpg"
+    },
+    {
+      "name": "Event Name 8",
+      "image": "/path-to-image8.jpg"
+    }
+  ]
+  
