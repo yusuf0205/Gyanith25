@@ -84,25 +84,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 50px;
   margin-right: auto;
   left: 50px;
-  font-family: 'Inter';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.94px;
-  text-align: left;
-  text-underline-position: 'from-font';
-  text-decoration-skip-ink: none;
 }
 .user img {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 35px;
   cursor: pointer;
 }
 
 .power {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 35px;
+  margin-right: 50px;
 }
 /* 
 .title-event{
