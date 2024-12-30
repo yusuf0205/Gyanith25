@@ -8,6 +8,8 @@ import files from "./Asset/files.png";
 import search from "./Asset/search.png";
 import power from "./Asset/power.png";
 import user from "./Asset/user.png";
+import edge from "./Asset/edge.png";
+import App from "../App";
 
 const HandleClick = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
@@ -36,9 +38,51 @@ const Home = () => {
           <div className="title-event">
             <div className="title-text">Pinned</div>
           </div>
-          <div className="app"></div>
+          <div className="app">
+            <div className="pin">
+              <img src={edge} alt="" />
+              <div className="event-name">Microsoft edge</div>
+            </div>
+            <div className="pin">
+              <img src={whatsapp} alt="" />
+              <div className="event-name">Whatsapp</div>
+            </div>
+            <div className="pin">
+              <img src={internetexplorer} alt="" />
+              <div className="event-name">Explorer</div>
+            </div>
+            <div className="pin">
+              <img src={files} alt="" />
+              <div className="event-name">Files</div>
+            </div>
+            <div className="pin">
+              <img src={photo} alt="" />
+              <div className="event-name">Photo</div>
+            </div>
+          </div>
           <div className="sponsor-title">Sponser</div>
-          <div className="sponsor"></div>
+          <div className="sponsor">
+            <div className="pin">
+              <img src={edge} alt="" />
+              <div className="event-name">Microsoft edge</div>
+            </div>
+            <div className="pin">
+              <img src={whatsapp} alt="" />
+              <div className="event-name">Whatsapp</div>
+            </div>
+            <div className="pin">
+              <img src={internetexplorer} alt="" />
+              <div className="event-name">Explorer</div>
+            </div>
+            <div className="pin">
+              <img src={files} alt="" />
+              <div className="event-name">Files</div>
+            </div>
+            <div className="pin">
+              <img src={photo} alt="" />
+              <div className="event-name">Photo</div>
+            </div>
+          </div>
         </div>
         <div className="bottom">
           <div className="user">
