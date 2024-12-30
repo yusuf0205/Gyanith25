@@ -1,33 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import './Hometest.css';
+import React, { useState } from "react";
+import "./Hometest.css";
 
-const Events = () => {
-  const [events, setEvents] = useState([]);
+const App = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Load events from the JSON file
-  useEffect(() => {
-    fetch('/Hometest.json') // Adjust path if the JSON is not in the public folder
-      .then((response) => response.json())
-      .then((data) => setEvents(data))
-      .catch((error) => console.error('Error fetching events:', error));
-  }, []);
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
 
   return (
-    <div className="events-container">
-      <div className="events-header">
-        <h2>Events</h2>
-        <button className="all-events-button">All Events</button>
+    <div className="app-container">
+      {/* Taskbar */}
+      <div className="taskbar">
+        <button className="start-button" onClick={toggleVisibility}>
+          <img src="/path-to-windows-icon.png" alt="Start" />
+        </button>
       </div>
-      <div className="events-grid">
-        {events.map((event, index) => (
-          <div className="event-card" key={index}>
-            <img src={event.image} alt={event.name} className="event-image" />
-            <p className="event-name">{event.name}</p>
+
+      {/* Transparent Div */}
+      <div
+        className={`transparent-div ${isVisible ? "open-animation" : "close-animation"}`}
+      >
+        <div className="search-bar">
+          <input type="text" placeholder="Type Here To Search" />
+        </div>
+        <div className="content">
+          <div className="events">
+            <h2>Events</h2>
+            <button className="all-events-button">All Events</button>
           </div>
-        ))}
+          <div className="sponsors">
+            <h2>Sponsors</h2>
+            <button className="all-sponsors-button">All Sponsors</button>
+          </div>
+        </div>
+        <div className="footer">
+          <span>User name</span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Events;
+export default App;

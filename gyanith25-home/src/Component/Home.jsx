@@ -14,6 +14,10 @@ const HandleClick = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
 const Home = () => {
+
+  const data = {
+    username: "John Doe",
+  };
   return (
     <div className="flex-box">
       <div className="container">
@@ -23,11 +27,10 @@ const Home = () => {
         </div>
         <div className="content">
           <div className="title-event">
-            <div className="title-text">Events</div>
-            <input type="text" />
+            <div className="title-text">Pinned</div>
           </div>
           <div className="app"></div>
-          <div className="sponsor-title"></div>
+          <div className="sponsor-title">Sponser</div>
           <div className="sponsor"></div>
         </div>
         <div className="bottom">

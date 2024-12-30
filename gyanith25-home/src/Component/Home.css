@@ -64,12 +64,12 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 658px;
   height: 403px;
-  background: white;
-  opacity: 0.05;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1;
   border-radius: 30px;
 }
 
@@ -91,6 +91,9 @@ body {
   font-style: bolder;
   border: none;
   outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
 }
 .title-event input{
   width: 88px;
@@ -107,18 +110,24 @@ body {
   width: 619px;
   height: 100px;
   background: red;
+  border-radius: 18px;
 }
 
 .sponsor-title{
   width: 639px;
   height: 19px;
-  background:red;
+  font-size: 20px;
+  font-weight: 500;
+  left: 10px;
+  
 }
 
 .sponsor{
   width: 619px;
   height: 100px;
-  background:red;
+  background:white;
+  opacity: 0.05;
+  border-radius: 18px;
 }
 
 
