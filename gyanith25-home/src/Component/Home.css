@@ -17,14 +17,113 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
   margin: auto;
   width: 50rem;
-  height: 32rem;
+  max-height: 32rem;
   background: radial-gradient(50% 72.34% at 50% 50%, #6fa6dc 0%, #a8bbcf 100%);
   opacity: 0.9;
   border-radius: 30px;
 }
 
+.search-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+  width: 658px;
+  height: 40px;
+  margin-top: 32px;
+  background: white;
+  border: Mixed solid #8b95ea;
+  border-radius: 8px;
+}
+
+.search-box img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-box input {
+  width: 500px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  color: #8b95ea;
+}
+
+.content {
+  width: 658px;
+  height: 403px;
+  background: black;
+  background: white;
+  opacity: 0.05;
+  border-radius: 30px;
+}
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50rem;
+  height: 50px;
+  background: #98acc7;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  left: 50px;
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  text-underline-position: 'from-font';
+  text-decoration-skip-ink: none;
+}
+.user img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.power {
+  width: 30px;
+  height: 30px;
+}
+/* 
+.title-event{
+  width: 100px;
+  height: 100px;
+  background:black;
+
+}
+
+.app{
+  width: 100px;
+  height: 100px;
+  background: black;
+}
+
+.sponsor{
+  width: 100px;
+  height: 100px;
+  background:black;
+  margin-bottom: 32px;
+} */
 .navbar {
   position: absolute;
   display: flex;
@@ -51,7 +150,8 @@ body {
   height: 44px;
 }
 
-.icons img{
-  width: 50px;
-  height: 50px;
+.icons img {
+  width: 55px;
+  height: 45px;
+  cursor: pointer;
 }
