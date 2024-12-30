@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import windows from "./Asset/windows.png";
 import whatsapp from "./Asset/whatsapp.png";
@@ -9,18 +9,25 @@ import search from "./Asset/search.png";
 import power from "./Asset/power.png";
 import user from "./Asset/user.png";
 
-
 const HandleClick = (url) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
 const Home = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
   const data = {
     username: "John Doe",
   };
   return (
     <div className="flex-box">
-      <div className="container">
+      <div
+        className={`container ${
+          isVisible ? "open-animation" : "close-animation"
+        }`}
+      >
         <div className="search-box">
           <img src={search} alt="" />
           <input type="text" placeholder="Search" />
@@ -43,7 +50,7 @@ const Home = () => {
       </div>
       <div className="navbar">
         <div className="icons">
-          <img src={windows} alt="windows" />
+          <img src={windows} alt="windows" onClick={toggleVisibility} />
           <img
             src={whatsapp}
             alt="whatsapp"

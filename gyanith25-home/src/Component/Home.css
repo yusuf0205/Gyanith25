@@ -17,10 +17,15 @@ body {
 }
 
 .container {
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 30px;
+  transform: translate(0, 100%) scale(0.3);
+  visibility: hidden;
+  transform-origin: bottom center;
+  backdrop-filter: blur(10px);
   align-items: center;
   margin: auto;
   width: 50rem;
@@ -28,6 +33,7 @@ body {
   background: radial-gradient(50% 72.34% at 50% 50%, #6fa6dc 0%, #a8bbcf 100%);
   opacity: 0.9;
   border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .search-box {
@@ -73,17 +79,17 @@ body {
   border-radius: 30px;
 }
 
-.title-event{
+.title-event {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   width: 639px;
   height: 19px;
-  background:transparent;
+  background: transparent;
 }
 
-.title-text{
+.title-text {
   flex: 1;
   width: 50px;
   height: 19px;
@@ -95,7 +101,7 @@ body {
   font-weight: 500;
   margin-left: 5px;
 }
-.title-event input{
+.title-event input {
   width: 88px;
   height: 19px;
   color: Black;
@@ -106,30 +112,28 @@ body {
   background: red;
 }
 
-.app{
+.app {
   width: 619px;
   height: 100px;
   background: red;
   border-radius: 18px;
 }
 
-.sponsor-title{
+.sponsor-title {
   width: 639px;
   height: 19px;
   font-size: 20px;
   font-weight: 500;
   left: 10px;
-  
 }
 
-.sponsor{
+.sponsor {
   width: 619px;
   height: 100px;
-  background:white;
+  background: white;
   opacity: 0.05;
   border-radius: 18px;
 }
-
 
 .bottom {
   display: flex;
@@ -160,6 +164,7 @@ body {
   width: 45px;
   height: 35px;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 .navbar {
@@ -192,4 +197,43 @@ body {
   width: 55px;
   height: 45px;
   cursor: pointer;
+  transform: none;
+}
+
+.icons img:hover {
+  transform: scale(1.3);
+}
+
+.open-animation {
+  animation: expand-and-rise 0.5s ease-in-out forwards;
+}
+
+.close-animation {
+  animation: shrink-and-fall 0.5s ease-in-out forwards;
+}
+
+@keyframes expand-and-rise {
+  0% {
+    transform: translate(0, 100%) scale(0.3);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes shrink-and-fall {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: translate(0, 100%) scale(0.3);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
