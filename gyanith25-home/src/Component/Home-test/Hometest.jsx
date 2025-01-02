@@ -9,32 +9,32 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
+    <div className="home-app-container">
       {/* Taskbar */}
-      <div className="taskbar">
-        <button className="start-button" onClick={toggleVisibility}>
+      <div className="home-taskbar">
+        <button className="home-start-button" onClick={toggleVisibility}>
           <img src="/path-to-windows-icon.png" alt="Start" />
         </button>
       </div>
 
       {/* Transparent Div */}
       <div
-        className={`transparent-div ${isVisible ? "open-animation" : "close-animation"}`}
+        className={`home-transparent-div ${isVisible ? "home-open-animation" : "home-close-animation"}`}
       >
-        <div className="search-bar">
+        <div className="home-search-bar">
           <input type="text" placeholder="Type Here To Search" />
         </div>
-        <div className="content">
-          <div className="events">
+        <div className="home-content">
+          <div className="home-events">
             <h2>Events</h2>
-            <button className="all-events-button">All Events</button>
+            <button className="home-all-events-button">All Events</button>
           </div>
-          <div className="sponsors">
+          <div className="home-sponsors">
             <h2>Sponsors</h2>
-            <button className="all-sponsors-button">All Sponsors</button>
+            <button className="home-all-sponsors-button">All Sponsors</button>
           </div>
         </div>
-        <div className="footer">
+        <div className="home-footer">
           <span>User name</span>
         </div>
       </div>
